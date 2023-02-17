@@ -319,11 +319,10 @@ public class IfElseStatementTheme {
         units = total % 10;
         dozens = total / 10 % 10;
         hundreds = total / 100 % 10;
-
         int requiredBanknotesInFaceValue100 = (nominalValue100 - hundreds) + 2 * hundreds - nominalValue100;
         int requiredBanknotesInFaceValue10 = (nominalValue10 - dozens) + 2 * dozens - nominalValue10;
         int requiredBanknotesInFaceValue1 = nominalValue1 - (100 - dozens * 10) + units;
-        if (requiredBanknotesInFaceValue100 < 0) {
+        if (total > 1000) {
             System.out.println("Извините, банкнот не хватает!");
         } else {
             if (requiredBanknotesInFaceValue100 > 0) {
