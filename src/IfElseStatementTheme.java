@@ -30,11 +30,11 @@ public class IfElseStatementTheme {
 
         int firstLetterOfTheName = "Семён".charAt(0);
         if (firstLetterOfTheName == "М".charAt(0)) {
-            System.out.println("True");
+            System.out.println("Первая буква имени = True");
         } else if (firstLetterOfTheName == "I".charAt(0)) {
-            System.out.println("True");
+            System.out.println("Первая буква имени = True");
         } else {
-            System.out.println("False");
+            System.out.println("Первая буква имени = False");
         }
 
         System.out.println("2. Поиск max и min числа");
@@ -50,35 +50,23 @@ public class IfElseStatementTheme {
         } else {
             System.out.println("Числа равны");
         }
-        if (secondNum > firstNum) {
-            System.out.println("Максимальное число равно = " + secondNum);
-            System.out.println("Минимальное число равно = " + firstNum);
-        } else if (secondNum < firstNum) {
-            System.out.println("Максимальное число равно = " + firstNum);
-            System.out.println("Минимальное число равно = " + secondNum);
-        } else if (secondNum == firstNum) {
-            System.out.println("Числа равны");
-        }
 
         System.out.println("3. Проверка числа");
 
         int firstVariable = 10;
-        int secondVariable = firstVariable % 2;
         System.out.println("Исходное число = " + firstVariable);
 
         if (firstVariable == 0) {
             System.out.println("Число = " + firstVariable);
         } else {
-            if (secondVariable == 0) {
+            if (firstVariable % 2 == 0) {
                 System.out.println("Num even");
-            }
-            if (secondVariable != 0) {
+            } else {
                 System.out.println("Num odd");
             }
             if (firstVariable > 0) {
                 System.out.println("Num positive");
-            }
-            if (firstVariable < 0) {
+            } else {
                 System.out.println("Num negative");
             }
         }
@@ -87,172 +75,56 @@ public class IfElseStatementTheme {
 
         firstNum = 123;
         secondNum = 223;
-
-        int unitsFirstNum;
-        int unitsSecondNum;
-        int dozensFirstNum;
-        int dozensSecondNum;
-        int hundredsFirstNum;
-        int hundredsSecondNum;
         System.out.println("Исходное число = " + firstNum);
         System.out.println("Исходное число = " + secondNum);
 
-        unitsFirstNum = firstNum % 10;
-        unitsSecondNum = secondNum % 10;
-        dozensFirstNum = (firstNum / 10) % 10;
-        dozensSecondNum = (secondNum / 10) % 10;
-        hundredsFirstNum = (firstNum / 100) % 10;
-        hundredsSecondNum = (secondNum / 100) % 10;
-
-        if (unitsFirstNum != unitsSecondNum) {
+        if (firstNum % 10 != secondNum % 10) {
             System.out.println("равных единиц(в третьем разряде) нет");
+        } else {
+            System.out.println("одинаковые цифры в единицах(3 разряде): " + firstNum % 10);
         }
-        if (dozensFirstNum != dozensSecondNum) {
+        if ((firstNum / 10) % 10 != (secondNum / 10) % 10) {
             System.out.println("равных десятков(во втором разряде) нет");
+        } else {
+            System.out.println("одинаковые цифры в десятках(2 разряде): " + (firstNum / 10) % 10);
         }
-        if (hundredsFirstNum != hundredsSecondNum) {
+        if ((firstNum / 100) % 10 != (secondNum / 100) % 10) {
             System.out.println("равных сотен(в первом разряде) нет");
+        } else {
+            System.out.println("одинаковые цифры в сотнях(1 разряде): " + (firstNum / 100) % 10);
         }
-        if (unitsFirstNum == unitsSecondNum) {
-            System.out.println("одинаковые цифры в единицах(3 разряде): " + unitsFirstNum);
-        }
-        if (dozensFirstNum == dozensSecondNum) {
-            System.out.println("одинаковые цифры в десятках(2 разряде): " + dozensFirstNum);
-        }
-        if (hundredsFirstNum == hundredsSecondNum) {
-            System.out.println("одинаковые цифры в сотнях(1 разряд): " + hundredsFirstNum);
-        }
+
 
         System.out.println("5. Определение символа по его коду");
 
-        char allCode = '\u0057';
+        char allCode = '\u0058';
+
         if ((allCode <= '9') && (allCode >= '1')) {
             System.out.println("Число = " + allCode);
-        //проверил все буквы англ алфавита
-        } else if (allCode == 'w') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'W') {
+        } else if (allCode > 64 && allCode < 91) {
             System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'a') {
+        } else if (allCode > 96 && allCode < 123) {
             System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'A') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'b') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'B') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'c') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'C') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'd') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'D') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'e') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'E') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'f') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'F') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'g') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'G') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'h') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'H') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'i') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'I') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'j') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'J') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'k') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'K') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'l') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'L') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'm') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'M') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'n') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'N') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'o') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'O') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'p') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'P') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'q') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'Q') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'r') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'R') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 's') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'S') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 't') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'T') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'u') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'U') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'v') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'V') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'x') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'X') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'y') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'Y') {
-            System.out.println("Большая буква = " + allCode);
-        } else if (allCode == 'z') {
-            System.out.println("Маленькая буква = " + allCode);
-        } else if (allCode == 'Z') {
-            System.out.println("Большая буква = " + allCode);
         } else {
             System.out.println("Не буква и не число = " + allCode);
         }
 
         System.out.println("6. Подсчет суммы вклада и начисленных банком %");
-
         //вклад может быть не круглым числом, соответственно, дабы получить более точный результат я выбрал "double"
-        double depositAmount = 300_000;
+        double depositAmount = 70_000;
         double amountWithInterest;
         System.out.println("Сумма вклада = " + depositAmount);
+        if (depositAmount < 100_000) {
+            System.out.println("Начисленный процент = " + depositAmount / 100 * 5 + "\nИтоговая сумма с начисленным " +
+                    "процентом = " + (amountWithInterest = depositAmount + depositAmount / 100 * 5));
+        } else if (depositAmount < 300_000) {
+            System.out.println("Начисленный процент = " + depositAmount / 100 * 7 + "\nИтоговая сумма с начисленным" +
+                    " процентом = " + (amountWithInterest = depositAmount + depositAmount / 100 * 7));
+        } else {
+            System.out.println("Начисленный процент = " + depositAmount / 100 * 10 + "\nИтоговая сумма с начисленным" +
+                    " процентом = " + (amountWithInterest = depositAmount + depositAmount / 100 * 10));
+        }
 
-        if (depositAmount < 100_001) {
-            System.out.println("Начисленный процент = " + depositAmount / 100 * 5 + "\nИтоговая сумма с начисленным процентом = " + (amountWithInterest = depositAmount + depositAmount / 100 * 5));
-        }
-        if (100_000 < depositAmount && 300_001 > depositAmount) {
-            System.out.println("Начисленный процент = " + depositAmount / 100 * 7 + "\nИтоговая сумма с начисленным процентом = " + (amountWithInterest = depositAmount + depositAmount / 100 * 7));
-        }
-        if (300_000 < depositAmount) {
-            System.out.println("Начисленный процент = " + depositAmount / 100 * 10 + "\nИтоговая сумма с начисленным процентом = " + (amountWithInterest = depositAmount + depositAmount / 100 * 10));
-        }
         System.out.println("7. Определение оценки по предметам");
 
         double history = 59;
@@ -288,8 +160,8 @@ public class IfElseStatementTheme {
             averageScore += 4;
         }
         if (programming > 91) {
-            System.out.println("Оценка = " + 5 + "; Предмет: программирование");
-            averageScore += 5;
+                System.out.println("Оценка = " + 5 + "; Предмет: программирование");
+                averageScore += 5;
         }
         System.out.println("Средний балл по предметам = " + averageScore / 2);
         System.out.println("Средний процент по предметам = " + averagePercentage);
@@ -297,13 +169,13 @@ public class IfElseStatementTheme {
         System.out.println("8. Расчет прибыли за год");
 
         int room = 5000;
-        int sellsTheProduct = 4000;
+        int sellsTheProduct = 13000;
         int costPrice = 9000;
-        int annualProfit = 12 * (sellsTheProduct - costPrice - room);
+
         if (sellsTheProduct - (room + costPrice) < 0) {
-            System.out.println("Прибыль за год: " + annualProfit);
+            System.out.println("Прибыль за год: " + 12 * (sellsTheProduct - costPrice - room));
         } else {
-            System.out.println("Прибыль за год: +" + annualProfit);
+            System.out.println("Прибыль за год: +" + 12 * (sellsTheProduct - costPrice - room));
         }
 
         System.out.println("9. Подсчет количества банкнот");
