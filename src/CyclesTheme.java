@@ -97,6 +97,7 @@ public class CyclesTheme {
         }
 
         String sign = "$";
+
         int count = 0;
 
         do {
